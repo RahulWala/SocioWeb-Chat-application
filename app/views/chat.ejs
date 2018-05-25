@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ./parts/head.ejs %>
+</head>
+<body>
+  <% include ./parts/header.ejs %>
+  <br>
+  <main>
+    <div class="container-fluid">
+      <input type="hidden" id="user" value="<%= user.username %>"/>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+          
+          <h4> Chat options </h4>
+          <hr>
+          <div id="scrl1">
+            <p> Click On Group for group Chat Or On Name</p>
+            <ul id="list"></ul>
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          
+          <div>
+            <h5 id="frndName" class="hvr-float-shadow"> Chat Room </h5>
+            <hr>
+          </div>
+          
+          <div id="scrl2">
+            <p id="loading">Loading...wait for a second...</p>
+            <p id="noChat">No Chat to Display...</p>
+            <p id="initMsg">!! Chat with user or in Group</p>
+            <ul id="messages"></ul>
+          </div>
+          
+          <div class="col-lg-10 offset-lg-1">
+            <form action="" id="chatForm">
+              <p id="typing" class="text-info"></p>
+              <div class="form-group">
+                <input id="myMsg" class="input-box-send form-control" autocomplete="off" placeholder="Enter your Message here..." required>
+              </div>
+            </form>
+          </div>
+        
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <ul id="cmd" class="list-unstyled bg-secondary" style="height: 50px;overflow: auto;"></ul>
+
+  <% include ./parts/footer.ejs %>
+
+  <script src="/js/scriptForChat.js"></script>
+</body>
+</html>

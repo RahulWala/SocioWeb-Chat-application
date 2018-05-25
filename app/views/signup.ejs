@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ./parts/head.ejs %>
+</head>
+<body>
+  <% include ./parts/header.ejs %>
+
+  <br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-6 offset-md-3">
+        <h5 class="hvr-float-shadow"> Register </h5>
+        <br>
+        <br>
+
+        <form class="signup-form" action="/user/api/v1/signup" method="post">
+
+          <div class="form-group input-group">
+            <span class="input-group-prepend">
+              <i class="input-group-text fas fa-user"></i>
+            </span>
+            <input type="text" id="uname" name="username" class="form-control" placeholder="Enter Username" autofocus autocomplete="off" required minlength="6">
+          </div>
+
+          <div class="form-group input-group">
+            <span class="input-group-prepend">
+              <i class="input-group-text far fa-envelope"></i>
+            </span>
+            <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" required>
+          </div>
+
+          <div class="form-group input-group">
+            <span class="input-group-prepend">
+              <i class="input-group-text fas fa-lock"></i>
+            </span>
+            <input type="password" id="pass" name="password" class="form-control" placeholder="Enter Password" size="6" required minlength="6">
+          </div>
+
+          <br>
+          <button type="submit" class="btn btn-primary btn-block hvr-float-shadow"> SignUp</button>
+          <br>
+          <br>
+          <h6> Or </h6>
+          <br>
+          <a href="/user/login" class="btn btn-block btn-secondary hvr-float-shadow"> Login</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <% include ./parts/footer.ejs %>
+
+  <script src="/js/scriptForSignup.js"></script>
+</body>
+</html>
