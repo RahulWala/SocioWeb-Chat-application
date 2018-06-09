@@ -13,7 +13,7 @@ var logger = require('morgan');
 var flash = require('express-flash');
 
 //port setup
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8000;
 
 //socket.io
 require('./libs/chat.js').sockets(http);
@@ -21,12 +21,9 @@ require('./libs/chat.js').sockets(http);
 app.use(logger('dev'));
 app.use(flash());
 
-//db connection
-var dbPath = "mongodb://localhost/socioweb";
+// DB connection
+var dbPath = "mongodb://Rahul:rahul123@ds147450.mlab.com:47450/socioweb";
 mongoose.connect(dbPath);
-mongoose.connection.once('open',function(){
-  console.log("Database Connection open...");
-});
 
 //http method override middleware
 app.use(methodOverride(function(req,res){
@@ -117,6 +114,4 @@ app.use(function(req,res,next){
 });//end of set Logged In User.
 
 
-http.listen(port,function(){
-  console.log("App Started listening on :" +port);
-});
+http.listen(port,'172.31.30.43');
