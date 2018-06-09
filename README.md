@@ -59,3 +59,4 @@ steps to deploy and run and use the application
 18) Now type "pm2 start app.js" to host your application to your public dns name
 19) to stop hosting write  "pm2 stop app.js"
 20) Go to browser and type public dns of your instance and voila!!!! you have deploy application at amazon webservice!!!!
+ Refrence link :- for reverse proxy [go to this link](https://medium.com/@utkarsh_verma/configure-nginx-as-a-web-server-and-reverse-proxy-for-nodejs-application-on-aws-ubuntu-16-04-server-872922e21d38)
